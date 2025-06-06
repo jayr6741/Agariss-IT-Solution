@@ -44,6 +44,7 @@ const updateBlog = async (req, res) => {
   try {
     const { blog_title, date, blog_name } = req.body;
     const blog_image = req.file?.filename;
+   const imageUrl = `https://agariss-it-solution.onrender.com/uploads/${blog_image}`;
 
     const updatedBlog = await blogSchema.findByIdAndUpdate(
       req.params.id,
@@ -51,7 +52,7 @@ const updateBlog = async (req, res) => {
         blog_title,
         date,
         blog_name,
-        ...(blog_image && { blog_image }),
+        blog_image:imageUrl,
       },
       { new: true }
     );
