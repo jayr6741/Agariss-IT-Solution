@@ -6,10 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3001"
-    },
-    {
-      "url": "localhost://"
+      "url": "https://agariss-it-solution.onrender.com"
     }
   ],
   "tags": [
