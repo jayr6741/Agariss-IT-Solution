@@ -7,9 +7,6 @@
   "servers": [
     {
       "url": "https://agariss-it-solution.onrender.com"
-    },
-    {
-      "url": "localhost://"
     }
   ],
   "tags": [
