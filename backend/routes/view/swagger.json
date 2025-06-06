@@ -1,0 +1,343 @@
+﻿{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "agariss It solution",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001"
+    }
+  ],
+  "paths": {
+    "/v1/contact": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "contactus",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "firstName": "Ravi",
+                  "lastName": "Sharma",
+                  "email": "ravi.sharma@example.com",
+                  "moblie": 9876543210,
+                  "description": "Looking for business inquiry."
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/blogdetails": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "blogdetails",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "banner_images": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "blog_imaage": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "project": {
+                    "type": "string",
+                    "example": "\t{\"name\":\"App\",\"client\":\"ABC Ltd.\",\"date\":\"2025-06-05\",\"platform\":\"Web\"}"
+                  },
+                  "clientOverview": {
+                    "type": "string",
+                    "example": "\tA system to manage local service bookings."
+                  },
+                  "objectives": {
+                    "type": "string",
+                    "example": "[\"Fast booking\",\"Admin dashboard\"]"
+                  },
+                  "feature\t": {
+                    "type": "string",
+                    "example": "[\"Login\",\"Notifications\",\"Service listing\"]"
+                  },
+                  "blog_schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/blog": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "blogs",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "blog_image": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "blog_title": {
+                    "type": "string",
+                    "example": "moblie App"
+                  },
+                  "date": {
+                    "type": "string",
+                    "example": "December 27 2024"
+                  },
+                  "blog_name": {
+                    "type": "string",
+                    "example": "A customer booking app"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/opening": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "opening upload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "title": "Flutter  intern",
+                  "jobtype": "internship ,on premise,fresher or final year student",
+                  "requirement": "Basic understanding of Dart & Flutter ,Ui design sense ,and willingness to learn"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/apply": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "opening apply",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fullName": {
+                    "type": "string",
+                    "example": "Ravi Sharma"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "sharma@example.com"
+                  },
+                  "contact_number": {
+                    "type": "integer",
+                    "example": "9876543210"
+                  },
+                  "resume": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "position": {
+                    "type": "string",
+                    "example": "node js Intern"
+                  },
+                  "experience": {
+                    "type": "string",
+                    "example": "Fresher"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/work": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "work",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "Green Wallk"
+                  },
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "A green walk, in general, refers to a stroll or hike in a natural, green space, often with a focus on environmental benefits or a specific activity like birdwatching or wildlife observation. Green walks can also be part of larger initiatives promoting mental health and wellbeing through access to nature. "
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/blogdata/68416897a8393e375b4e563a": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "blogsdetails get",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/workdata": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "workdata get",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/applydata": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "opening apply data get",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/openingdata": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "opening upload data get",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/contactdata": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "contactus data get",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
