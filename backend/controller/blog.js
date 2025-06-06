@@ -7,6 +7,7 @@ const createBlog = async (req, res) => {
   try {
     const { blog_title, date, blog_name } = req.body;
     const blog_image = req.file?.filename;
+    const imageUrl = `https://agariss-it-solution.onrender.com/uploads/${blog_image}`;
 
     if (!blog_title || !date || !blog_name || !blog_image) {
       return Response.Error({
@@ -17,7 +18,7 @@ const createBlog = async (req, res) => {
     }
 
     const blog = await blogSchema.create({
-      blog_image,
+      blog_image:imageUrl,
       blog_title,
       date,
       blog_name,
@@ -113,7 +114,8 @@ const createBlogDetails = async (req, res) => {
 
     const banner_images = req.files?.banner_images?.[0]?.filename;
     const blog_image = req.files?.blog_imaage?.map(file => file.filename) || [];
-
+  const imageUrl = `https://agariss-it-solution.onrender.com/uploads/${banner_images}`;
+    const imageUrl1 = `https://agariss-it-solution.onrender.com/uploads/${blog_image}`;
     if (!project || !clientOverview || !objectives || !feature || !banner_images || !blog_image.length) {
       return Response.Error({
         res,
@@ -123,8 +125,8 @@ const createBlogDetails = async (req, res) => {
     }
 
     const Blog = await blogModel.create({
-      banner_images,
-      blog_image,
+      banner_images:imageUrl,
+      blog_image:imageUrl1,
       project: JSON.parse(project),
       clientOverview,
       objectives,
