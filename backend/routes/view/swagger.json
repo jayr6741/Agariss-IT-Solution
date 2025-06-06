@@ -149,7 +149,7 @@
         }
       }
     },
-    "/001/v1/blogupdate/6842758dddd9e9142380e569": {
+    "/v1/blogupdate/6842758dddd9e9142380e569": {
       "put": {
         "tags": [
           "admin panel > blog"
@@ -192,7 +192,7 @@
         }
       }
     },
-    "/001/v1/contactdelete/68429bc98d56cd511c9f6909": {
+    "/v1/contactdelete/68429bc98d56cd511c9f6909": {
       "delete": {
         "tags": [
           "admin panel > blog"
@@ -357,7 +357,7 @@
         }
       }
     },
-    "/v1/": {
+    "/v1/contactdelete/6842c5f7bcd0292db847ad29": {
       "delete": {
         "tags": [
           "admin panel > contactus"
