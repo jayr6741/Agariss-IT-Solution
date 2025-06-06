@@ -453,7 +453,7 @@
         }
       }
     },
-    "/001/v1/blogdata/68427ca4227bc1bb2d857433": {
+    "/v1/blogdata/68427ca4227bc1bb2d857433": {
       "get": {
         "tags": [
           "userpenal"
@@ -469,7 +469,7 @@
         }
       }
     },
-    "/001/v1/blogall": {
+    "/v1/blogall": {
       "get": {
         "tags": [
           "userpenal"
